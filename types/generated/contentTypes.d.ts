@@ -593,8 +593,8 @@ export interface ApiHomepageContentHomepageContent
       'oneToOne',
       'api::customer-experience.customer-experience'
     >;
-    hero_section: Schema.Attribute.Relation<
-      'oneToOne',
+    hero_sections: Schema.Attribute.Relation<
+      'oneToMany',
       'api::hero-section.hero-section'
     >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

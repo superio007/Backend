@@ -11,9 +11,9 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "hero_section": {
+    "hero_sections": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::hero-section.hero-section"
     },
     "brands": {
