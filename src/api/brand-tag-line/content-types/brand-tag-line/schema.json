@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brand_tag_lines",
+  "info": {
+    "singularName": "brand-tag-line",
+    "pluralName": "brand-tag-lines",
+    "displayName": "Brand Tag Line"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

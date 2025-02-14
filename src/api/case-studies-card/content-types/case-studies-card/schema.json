@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies_cards",
+  "info": {
+    "singularName": "case-studies-card",
+    "pluralName": "case-studies-cards",
+    "displayName": "Case Studies Cards"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "highlights": {
+      "type": "json"
+    }
+  }
+}

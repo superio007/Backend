@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopify_solutions",
+  "info": {
+    "singularName": "shopify-solution",
+    "pluralName": "shopify-solutions",
+    "displayName": "Shopify Solutions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 20
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "minLength": 40
+    },
+    "mockups": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

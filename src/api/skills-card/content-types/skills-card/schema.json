@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skills_cards",
+  "info": {
+    "singularName": "skills-card",
+    "pluralName": "skills-cards",
+    "displayName": "Skills Cards",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "highlights": {
+      "type": "json",
+      "required": true
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

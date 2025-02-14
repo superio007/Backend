@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_experiences",
+  "info": {
+    "singularName": "customer-experience",
+    "pluralName": "customer-experiences",
+    "displayName": "Customer Experience"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

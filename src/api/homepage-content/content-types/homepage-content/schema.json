@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepage_contents",
+  "info": {
+    "singularName": "homepage-content",
+    "pluralName": "homepage-contents",
+    "displayName": "homepage-content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "hero_section": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::hero-section.hero-section"
+    },
+    "brands": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::brand.brand"
+    },
+    "shopify_solutions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shopify-solution.shopify-solution"
+    },
+    "customer_experience": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer-experience.customer-experience"
+    },
+    "skills_cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skills-card.skills-card"
+    },
+    "case_study": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::case-studie.case-studie"
+    },
+    "case_studies_cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::case-studies-card.case-studies-card"
+    },
+    "brand_tag_line": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::brand-tag-line.brand-tag-line"
+    }
+  }
+}
