@@ -50,6 +50,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::brand-tag-line.brand-tag-line"
+    },
+    "cta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cta.cta"
     }
   }
 }

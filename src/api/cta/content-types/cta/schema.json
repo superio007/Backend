@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ctas",
+  "info": {
+    "singularName": "cta",
+    "pluralName": "ctas",
+    "displayName": "CTA"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "bookCall": {
+      "type": "string",
+      "required": true
+    },
+    "Audit": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

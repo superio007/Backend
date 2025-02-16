@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopify_audits",
+  "info": {
+    "singularName": "shopify-audit",
+    "pluralName": "shopify-audits",
+    "displayName": "Shopify Audits",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "highlights": {
+      "type": "json",
+      "required": true
+    },
+    "AuditLink": {
+      "type": "string",
+      "required": true
+    },
+    "sideimage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

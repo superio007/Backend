@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopify_hero_sections",
+  "info": {
+    "singularName": "shopify-hero-section",
+    "pluralName": "shopify-hero-sections",
+    "displayName": "Shopify Hero Section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "Audit": {
+      "type": "string",
+      "required": true
+    },
+    "TalktoUs": {
+      "type": "string",
+      "required": true
+    },
+    "sideimage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

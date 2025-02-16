@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopify_hero_cards",
+  "info": {
+    "singularName": "shopify-hero-card",
+    "pluralName": "shopify-hero-cards",
+    "displayName": "Shopify Hero Cards"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

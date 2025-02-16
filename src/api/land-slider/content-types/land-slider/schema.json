@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "land_sliders",
+  "info": {
+    "singularName": "land-slider",
+    "pluralName": "land-sliders",
+    "displayName": "Land Slider"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnail": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

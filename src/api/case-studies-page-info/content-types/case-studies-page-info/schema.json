@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies_page_infos",
+  "info": {
+    "singularName": "case-studies-page-info",
+    "pluralName": "case-studies-page-infos",
+    "displayName": "Case Studies page info"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "subTitle": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

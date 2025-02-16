@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_page_hero_sections",
+  "info": {
+    "singularName": "landing-page-hero-section",
+    "pluralName": "landing-page-hero-sections",
+    "displayName": "Landing page hero section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "BookCall": {
+      "type": "string",
+      "required": true
+    },
+    "TalktoUs": {
+      "type": "string",
+      "required": true
+    },
+    "sideimage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

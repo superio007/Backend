@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "shopify_store_pages",
+  "info": {
+    "singularName": "shopify-store-page",
+    "pluralName": "shopify-store-pages",
+    "displayName": "Shopify Store Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "landing_page_faq_sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::landing-page-faq-section.landing-page-faq-section"
+    },
+    "shopify_cta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::shopify-cta.shopify-cta"
+    },
+    "shopify_audits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shopify-audit.shopify-audit"
+    },
+    "shopify_custamizations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shopify-custamization.shopify-custamization"
+    },
+    "shopify_hero_cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shopify-hero-card.shopify-hero-card"
+    },
+    "shopify_hero_sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shopify-hero-section.shopify-hero-section"
+    },
+    "shopyfy_mockups": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shopyfy-mockup.shopyfy-mockup"
+    }
+  }
+}

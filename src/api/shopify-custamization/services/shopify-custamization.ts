@@ -1,0 +1,7 @@
+/**
+ * shopify-custamization service
+ */
+
+import { factories } from '@strapi/strapi';
+
+export default factories.createCoreService('api::shopify-custamization.shopify-custamization');

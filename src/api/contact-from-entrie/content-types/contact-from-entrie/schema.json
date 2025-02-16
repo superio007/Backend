@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_from_entries",
+  "info": {
+    "singularName": "contact-from-entrie",
+    "pluralName": "contact-from-entries",
+    "displayName": "Contact From Entries",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "BrandName": {
+      "type": "string",
+      "required": true
+    },
+    "YourName": {
+      "type": "string",
+      "required": true
+    },
+    "FindUs": {
+      "type": "string",
+      "required": true
+    },
+    "Overview": {
+      "type": "text",
+      "required": true
+    },
+    "ConversionRate": {
+      "type": "string",
+      "required": true
+    },
+    "MonthlyStoreSessions": {
+      "type": "string",
+      "required": true
+    },
+    "PhoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "EmailAddress": {
+      "type": "string",
+      "required": true
+    },
+    "WebsiteURL": {
+      "type": "string",
+      "required": true
+    },
+    "PhoneType": {
+      "type": "string"
+    },
+    "Issues": {
+      "type": "json"
+    }
+  }
+}

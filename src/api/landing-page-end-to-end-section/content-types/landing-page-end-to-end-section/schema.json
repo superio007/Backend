@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_page_end_to_end_sections",
+  "info": {
+    "singularName": "landing-page-end-to-end-section",
+    "pluralName": "landing-page-end-to-end-sections",
+    "displayName": "Landing page end to end section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "orderLink": {
+      "type": "string",
+      "required": true
+    },
+    "highlights": {
+      "type": "json"
+    },
+    "subheading": {
+      "type": "string",
+      "required": true
+    },
+    "sideimage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

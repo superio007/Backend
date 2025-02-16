@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopify_ctas",
+  "info": {
+    "singularName": "shopify-cta",
+    "pluralName": "shopify-ctas",
+    "displayName": "Shopify CTA"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "highlights": {
+      "type": "json",
+      "required": true
+    },
+    "TalktoUs": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

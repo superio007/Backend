@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopify_custamizations",
+  "info": {
+    "singularName": "shopify-custamization",
+    "pluralName": "shopify-custamizations",
+    "displayName": "Shopify Custamization"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "highlights": {
+      "type": "json"
+    },
+    "sideimage": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

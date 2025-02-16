@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_page_why_us_sections",
+  "info": {
+    "singularName": "landing-page-why-us-section",
+    "pluralName": "landing-page-why-us-sections",
+    "displayName": "Landing page why us section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "subTitle": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_page_why_us_cards_sections",
+  "info": {
+    "singularName": "landing-page-why-us-cards-section",
+    "pluralName": "landing-page-why-us-cards-sections",
+    "displayName": "Landing page why us cards section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "thumbnail": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "subTitle": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

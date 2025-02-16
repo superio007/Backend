@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "landing_page_faq_sections",
+  "info": {
+    "singularName": "landing-page-faq-section",
+    "pluralName": "landing-page-faq-sections",
+    "displayName": "Landing page FAQ section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

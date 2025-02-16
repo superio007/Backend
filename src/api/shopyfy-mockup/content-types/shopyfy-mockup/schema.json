@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shopyfy_mockups",
+  "info": {
+    "singularName": "shopyfy-mockup",
+    "pluralName": "shopyfy-mockups",
+    "displayName": "Shopyfy Mockups"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "highlights": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

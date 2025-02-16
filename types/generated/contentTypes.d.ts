@@ -488,6 +488,174 @@ export interface ApiCaseStudiesCardCaseStudiesCard
   };
 }
 
+export interface ApiCaseStudiesPageInfoCaseStudiesPageInfo
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'case_studies_page_infos';
+  info: {
+    displayName: 'Case Studies page info';
+    pluralName: 'case-studies-page-infos';
+    singularName: 'case-studies-page-info';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-studies-page-info.case-studies-page-info'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCaseStudiesPageCaseStudiesPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'case_studies_pages';
+  info: {
+    description: '';
+    displayName: 'Case Studies page';
+    pluralName: 'case-studies-pages';
+    singularName: 'case-studies-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    case_studies_cards: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-studies-card.case-studies-card'
+    >;
+    case_studies_page_infos: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-studies-page-info.case-studies-page-info'
+    >;
+    case_study_tag_line: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::case-study-tag-line.case-study-tag-line'
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-studies-page.case-studies-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCaseStudyTagLineCaseStudyTagLine
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'case_study_tag_lines';
+  info: {
+    displayName: 'Case Study Tag Line';
+    pluralName: 'case-study-tag-lines';
+    singularName: 'case-study-tag-line';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::case-study-tag-line.case-study-tag-line'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiContactFromEntrieContactFromEntrie
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'contact_from_entries';
+  info: {
+    description: '';
+    displayName: 'Contact From Entries';
+    pluralName: 'contact-from-entries';
+    singularName: 'contact-from-entrie';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    BrandName: Schema.Attribute.String & Schema.Attribute.Required;
+    ConversionRate: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    EmailAddress: Schema.Attribute.String & Schema.Attribute.Required;
+    FindUs: Schema.Attribute.String & Schema.Attribute.Required;
+    Issues: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-from-entrie.contact-from-entrie'
+    > &
+      Schema.Attribute.Private;
+    MonthlyStoreSessions: Schema.Attribute.String & Schema.Attribute.Required;
+    Overview: Schema.Attribute.Text & Schema.Attribute.Required;
+    PhoneNumber: Schema.Attribute.String & Schema.Attribute.Required;
+    PhoneType: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    WebsiteURL: Schema.Attribute.String & Schema.Attribute.Required;
+    YourName: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ApiCtaCta extends Struct.CollectionTypeSchema {
+  collectionName: 'ctas';
+  info: {
+    displayName: 'CTA';
+    pluralName: 'ctas';
+    singularName: 'cta';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Audit: Schema.Attribute.String & Schema.Attribute.Required;
+    bookCall: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::cta.cta'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCustomerExperienceCustomerExperience
   extends Struct.CollectionTypeSchema {
   collectionName: 'customer_experiences';
@@ -589,6 +757,7 @@ export interface ApiHomepageContentHomepageContent
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    cta: Schema.Attribute.Relation<'oneToOne', 'api::cta.cta'>;
     customer_experience: Schema.Attribute.Relation<
       'oneToOne',
       'api::customer-experience.customer-experience'
@@ -612,6 +781,419 @@ export interface ApiHomepageContentHomepageContent
       'oneToMany',
       'api::skills-card.skills-card'
     >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLandSliderLandSlider extends Struct.CollectionTypeSchema {
+  collectionName: 'land_sliders';
+  info: {
+    displayName: 'Land Slider';
+    pluralName: 'land-sliders';
+    singularName: 'land-slider';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::land-slider.land-slider'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    thumbnail: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLandingPageEndToEndSectionLandingPageEndToEndSection
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'landing_page_end_to_end_sections';
+  info: {
+    description: '';
+    displayName: 'Landing page end to end section';
+    pluralName: 'landing-page-end-to-end-sections';
+    singularName: 'landing-page-end-to-end-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    highlights: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landing-page-end-to-end-section.landing-page-end-to-end-section'
+    > &
+      Schema.Attribute.Private;
+    orderLink: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    sideimage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    subheading: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLandingPageFaqSectionLandingPageFaqSection
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'landing_page_faq_sections';
+  info: {
+    displayName: 'Landing page FAQ section';
+    pluralName: 'landing-page-faq-sections';
+    singularName: 'landing-page-faq-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    answer: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landing-page-faq-section.landing-page-faq-section'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    question: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLandingPageHeroSectionLandingPageHeroSection
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'landing_page_hero_sections';
+  info: {
+    displayName: 'Landing page hero section';
+    pluralName: 'landing-page-hero-sections';
+    singularName: 'landing-page-hero-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    BookCall: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landing-page-hero-section.landing-page-hero-section'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sideimage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    TalktoUs: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLandingPageWhyUsCardsSectionLandingPageWhyUsCardsSection
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'landing_page_why_us_cards_sections';
+  info: {
+    displayName: 'Landing page why us cards section';
+    pluralName: 'landing-page-why-us-cards-sections';
+    singularName: 'landing-page-why-us-cards-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landing-page-why-us-cards-section.landing-page-why-us-cards-section'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    thumbnail: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLandingPageWhyUsSectionLandingPageWhyUsSection
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'landing_page_why_us_sections';
+  info: {
+    displayName: 'Landing page why us section';
+    pluralName: 'landing-page-why-us-sections';
+    singularName: 'landing-page-why-us-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landing-page-why-us-section.landing-page-why-us-section'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    subTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiLandingPageLandingPage extends Struct.SingleTypeSchema {
+  collectionName: 'landing_pages';
+  info: {
+    description: '';
+    displayName: 'Landing Page';
+    pluralName: 'landing-pages';
+    singularName: 'landing-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    brand_tag_line: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::brand-tag-line.brand-tag-line'
+    >;
+    brands: Schema.Attribute.Relation<'oneToMany', 'api::brand.brand'>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    land_sliders: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::land-slider.land-slider'
+    >;
+    landing_page_end_to_end_section: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::landing-page-end-to-end-section.landing-page-end-to-end-section'
+    >;
+    landing_page_faq_sections: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landing-page-faq-section.landing-page-faq-section'
+    >;
+    landing_page_hero_section: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::landing-page-hero-section.landing-page-hero-section'
+    >;
+    landing_page_why_us_cards_sections: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landing-page-why-us-cards-section.landing-page-why-us-cards-section'
+    >;
+    landing_page_why_us_section: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::landing-page-why-us-section.landing-page-why-us-section'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landing-page.landing-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    shopify_solutions: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-solution.shopify-solution'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiShopifyAuditShopifyAudit
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'shopify_audits';
+  info: {
+    description: '';
+    displayName: 'Shopify Audits';
+    pluralName: 'shopify-audits';
+    singularName: 'shopify-audit';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    AuditLink: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    highlights: Schema.Attribute.JSON & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-audit.shopify-audit'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sideimage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiShopifyCtaShopifyCta extends Struct.CollectionTypeSchema {
+  collectionName: 'shopify_ctas';
+  info: {
+    displayName: 'Shopify CTA';
+    pluralName: 'shopify-ctas';
+    singularName: 'shopify-cta';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    highlights: Schema.Attribute.JSON & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-cta.shopify-cta'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    TalktoUs: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiShopifyCustamizationShopifyCustamization
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'shopify_custamizations';
+  info: {
+    displayName: 'Shopify Custamization';
+    pluralName: 'shopify-custamizations';
+    singularName: 'shopify-custamization';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    highlights: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-custamization.shopify-custamization'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sideimage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiShopifyHeroCardShopifyHeroCard
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'shopify_hero_cards';
+  info: {
+    displayName: 'Shopify Hero Cards';
+    pluralName: 'shopify-hero-cards';
+    singularName: 'shopify-hero-card';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-hero-card.shopify-hero-card'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    thumbnail: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiShopifyHeroSectionShopifyHeroSection
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'shopify_hero_sections';
+  info: {
+    description: '';
+    displayName: 'Shopify Hero Section';
+    pluralName: 'shopify-hero-sections';
+    singularName: 'shopify-hero-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Audit: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-hero-section.shopify-hero-section'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sideimage: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    TalktoUs: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -651,6 +1233,95 @@ export interface ApiShopifySolutionShopifySolution
       Schema.Attribute.SetMinMaxLength<{
         minLength: 20;
       }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiShopifyStorePageShopifyStorePage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'shopify_store_pages';
+  info: {
+    description: '';
+    displayName: 'Shopify Store Page';
+    pluralName: 'shopify-store-pages';
+    singularName: 'shopify-store-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    landing_page_faq_sections: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::landing-page-faq-section.landing-page-faq-section'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-store-page.shopify-store-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    shopify_audits: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-audit.shopify-audit'
+    >;
+    shopify_cta: Schema.Attribute.Relation<
+      'oneToOne',
+      'api::shopify-cta.shopify-cta'
+    >;
+    shopify_custamizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-custamization.shopify-custamization'
+    >;
+    shopify_hero_cards: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-hero-card.shopify-hero-card'
+    >;
+    shopify_hero_sections: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopify-hero-section.shopify-hero-section'
+    >;
+    shopyfy_mockups: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopyfy-mockup.shopyfy-mockup'
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiShopyfyMockupShopyfyMockup
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'shopyfy_mockups';
+  info: {
+    displayName: 'Shopyfy Mockups';
+    pluralName: 'shopyfy-mockups';
+    singularName: 'shopyfy-mockup';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    highlights: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::shopyfy-mockup.shopyfy-mockup'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1204,10 +1875,29 @@ declare module '@strapi/strapi' {
       'api::brand.brand': ApiBrandBrand;
       'api::case-studie.case-studie': ApiCaseStudieCaseStudie;
       'api::case-studies-card.case-studies-card': ApiCaseStudiesCardCaseStudiesCard;
+      'api::case-studies-page-info.case-studies-page-info': ApiCaseStudiesPageInfoCaseStudiesPageInfo;
+      'api::case-studies-page.case-studies-page': ApiCaseStudiesPageCaseStudiesPage;
+      'api::case-study-tag-line.case-study-tag-line': ApiCaseStudyTagLineCaseStudyTagLine;
+      'api::contact-from-entrie.contact-from-entrie': ApiContactFromEntrieContactFromEntrie;
+      'api::cta.cta': ApiCtaCta;
       'api::customer-experience.customer-experience': ApiCustomerExperienceCustomerExperience;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
       'api::homepage-content.homepage-content': ApiHomepageContentHomepageContent;
+      'api::land-slider.land-slider': ApiLandSliderLandSlider;
+      'api::landing-page-end-to-end-section.landing-page-end-to-end-section': ApiLandingPageEndToEndSectionLandingPageEndToEndSection;
+      'api::landing-page-faq-section.landing-page-faq-section': ApiLandingPageFaqSectionLandingPageFaqSection;
+      'api::landing-page-hero-section.landing-page-hero-section': ApiLandingPageHeroSectionLandingPageHeroSection;
+      'api::landing-page-why-us-cards-section.landing-page-why-us-cards-section': ApiLandingPageWhyUsCardsSectionLandingPageWhyUsCardsSection;
+      'api::landing-page-why-us-section.landing-page-why-us-section': ApiLandingPageWhyUsSectionLandingPageWhyUsSection;
+      'api::landing-page.landing-page': ApiLandingPageLandingPage;
+      'api::shopify-audit.shopify-audit': ApiShopifyAuditShopifyAudit;
+      'api::shopify-cta.shopify-cta': ApiShopifyCtaShopifyCta;
+      'api::shopify-custamization.shopify-custamization': ApiShopifyCustamizationShopifyCustamization;
+      'api::shopify-hero-card.shopify-hero-card': ApiShopifyHeroCardShopifyHeroCard;
+      'api::shopify-hero-section.shopify-hero-section': ApiShopifyHeroSectionShopifyHeroSection;
       'api::shopify-solution.shopify-solution': ApiShopifySolutionShopifySolution;
+      'api::shopify-store-page.shopify-store-page': ApiShopifyStorePageShopifyStorePage;
+      'api::shopyfy-mockup.shopyfy-mockup': ApiShopyfyMockupShopyfyMockup;
       'api::skills-card.skills-card': ApiSkillsCardSkillsCard;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

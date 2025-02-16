@@ -1,0 +1,60 @@
+{
+  "kind": "singleType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "Landing Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "landing_page_hero_section": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::landing-page-hero-section.landing-page-hero-section"
+    },
+    "brands": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::brand.brand"
+    },
+    "landing_page_end_to_end_section": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::landing-page-end-to-end-section.landing-page-end-to-end-section"
+    },
+    "landing_page_why_us_section": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::landing-page-why-us-section.landing-page-why-us-section"
+    },
+    "landing_page_why_us_cards_sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::landing-page-why-us-cards-section.landing-page-why-us-cards-section"
+    },
+    "shopify_solutions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shopify-solution.shopify-solution"
+    },
+    "landing_page_faq_sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::landing-page-faq-section.landing-page-faq-section"
+    },
+    "brand_tag_line": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::brand-tag-line.brand-tag-line"
+    },
+    "land_sliders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::land-slider.land-slider"
+    }
+  }
+}
